@@ -13,12 +13,22 @@ public class MyStepdefs {
     System.out.println("Tagged");
     System.out.println(url);
     System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+    printThread();
+  }
+
+  private void printThread() {
+    System.out.println("--------------------------------------------");
+    System.out.println(Thread.currentThread().getName());
+    System.out.println(Thread.currentThread().getId());
+    System.out.println("--------------------------------------------");
   }
 
   @Given("test steps")
-  public void testSteps() {
+  public void testSteps() throws InterruptedException {
+    Thread.sleep(3000);
     System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
     System.out.println("Not Tagged");
     System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+    printThread();
   }
 }
