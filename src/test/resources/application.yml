@@ -1,0 +1,7 @@
+logging:
+  level:
+    root: ERROR
+    com.automation: INFO
+
+application:
+  url: URL_VALUE
