@@ -17,6 +17,7 @@
 
     <properties>
         <cucumber.version>7.2.0</cucumber.version>
+        <selenium.version>4.20.0</selenium.version>
     </properties>
 
     <dependencies>
@@ -27,6 +28,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
         </dependency>
 
         <dependency>

@@ -1,6 +1,6 @@
 logging:
   level:
-    root: ERROR
+    root: INFO
     com.automation: INFO
 
 application:
