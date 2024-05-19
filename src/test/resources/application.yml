@@ -5,3 +5,7 @@ logging:
 
 application:
   url: URL_VALUE
+
+selenium:
+  browser: chrome
+  url: https://demoqa.com/
