@@ -5,4 +5,4 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @CucumberContextConfiguration
 @SpringBootTest()
-public class CucumberTestContextConfig {}
+public class CucumberContextConfig {}
