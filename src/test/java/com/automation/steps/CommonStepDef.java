@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class CommonStepDef {
   @Autowired protected HomePage homePage;
 
-  @Given("I navigate to the {string} page of demo site")
+  @Given("navigate to the {string} page of demo site")
   public void navigateTo(String page) {
-    homePage.navigateToHomePage();
+    homePage.launchApplication().navigateTo(page);
   }
 }

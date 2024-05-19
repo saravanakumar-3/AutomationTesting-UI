@@ -10,19 +10,21 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ApplicationConfig {
-  @Value("${selenium.browser}")
-  private String browser;
-
-//  @Bean
-//  @ScenarioScope
-//  public WebDriver getWebDriver() {
-//    switch (browser) {
-//      case "chrome":
-//        return new ChromeDriver();
-//      case "firefox":
-//        return new FirefoxDriver();
-//      default:
-//        throw new IllegalArgumentException("Browser '" + browser + "' is not supported");
-//    }
-//  }
+  @Bean
+  @ScenarioScope
+  public WebDriver getWebDriver(@Value("${selenium.browser}") String browser) {
+    WebDriver driver;
+    switch (browser) {
+      case "chrome":
+        driver = new ChromeDriver();
+        break;
+      case "firefox":
+        driver = new FirefoxDriver();
+        break;
+      default:
+        throw new IllegalArgumentException("Browser '" + browser + "' is not supported");
+    }
+    driver.manage().window().maximize();
+    return driver;
+  }
 }

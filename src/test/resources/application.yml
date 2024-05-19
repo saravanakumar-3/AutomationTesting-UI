@@ -3,9 +3,6 @@ logging:
     root: ERROR
     com.automation: INFO
 
-application:
-  url: URL_VALUE
-
 selenium:
   browser: chrome
-  url: https://demoqa.com/
+  url: https://the-internet.herokuapp.com/
