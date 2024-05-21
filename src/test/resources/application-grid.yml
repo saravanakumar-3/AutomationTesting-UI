@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: ERROR
+    com.automation: INFO
+
+selenium:
+  browser: chrome
+  url: https://the-internet.herokuapp.com/
+
+grid:
+  url: http://localhost:4444/wd/hub
